@@ -29,7 +29,7 @@
 <img src="./resources/images/DevSearch Projects.jpg">  
 
 # Profile Page
-<img src="./resources/images/Devsearch Profile.jpg">  
+<img src="./resources/images/Devsearch Profile.jpg.png">  
 
 # User Inbox
 <img src="./resources/images/Devsearch Inbox.jpg">  
