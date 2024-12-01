@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- Main Section -->
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <a class="backButton" href="{% url 'users:account' %}"><i class="im im-angle-left"><img src="data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTIuMDEyIDJjNS41MTggMCA5Ljk5NyA0LjQ4IDkuOTk3IDkuOTk4IDAgNS41MTctNC40NzkgOS45OTctOS45OTcgOS45OTdzLTkuOTk4LTQuNDgtOS45OTgtOS45OTdjMC01LjUxOCA0LjQ4LTkuOTk4IDkuOTk4LTkuOTk4em0tMS41MjMgNi4yMXMtMS41MDIgMS41MDUtMy4yNTUgMy4yNTljLS4xNDcuMTQ3LS4yMi4zMzktLjIyLjUzMXMuMDczLjM4My4yMi41M2MxLjc1MyAxLjc1NCAzLjI1NCAzLjI1OCAzLjI1NCAzLjI1OC4xNDUuMTQ1LjMzNS4yMTcuNTI2LjIxNy4xOTItLjAwMS4zODQtLjA3NC41MzEtLjIyMS4yOTItLjI5My4yOTQtLjc2Ni4wMDMtMS4wNTdsLTEuOTc3LTEuOTc3aDYuNjkzYy40MTQgMCAuNzUtLjMzNi43NS0uNzVzLS4zMzYtLjc1LS43NS0uNzVoLTYuNjkzbDEuOTc4LTEuOTc5Yy4yOS0uMjg5LjI4Ny0uNzYyLS4wMDYtMS4wNTQtLjE0Ny0uMTQ3LS4zMzktLjIyMS0uNTMtLjIyMi0uMTkgMC0uMzguMDcxLS41MjQuMjE1eiIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+"></i></a>
+            <br>
+
+            <form class="form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% for field in form %}
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">{{ field.label }}</label>
+                    {{ field }}
+                </div>
+                {% endfor %}
+
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}
